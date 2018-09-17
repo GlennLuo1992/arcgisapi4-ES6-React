@@ -1,0 +1,50 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "del-cli .cache-loader/**",
+    "build": "webpack --mode=production",
+    "start": "webpack-dev-server --mode=development --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@arcgis/webpack-plugin": "^4.7.11",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-rc.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-import": "^1.8.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-es2015-modules-amd": "^6.24.1",
+    "cache-loader": "^1.2.2",
+    "css-loader": "^0.28.11",
+    "del-cli": "^1.1.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^3.0.0",
+    "react-router-dom": "^4.3.1",
+    "sass-loader": "^7.0.1",
+    "sass-resources-loader": "^1.3.3",
+    "style-loader": "^0.22.1",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "antd": "^3.8.1",
+    "fbemitter": "^2.1.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-infinite-scroller": "^1.2.0",
+    "reqwest": "^2.0.5"
+  }
+}

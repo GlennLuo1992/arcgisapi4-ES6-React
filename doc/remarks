@@ -1,0 +1,49 @@
+index｛
+1. 构建布局结构，挂载Component，
+2. 新建WebMap和Layer作为参数传递到子组件｝
+
+tocControl｛
+1. 用于控制图层
+2. 动态加载MapImageLayer中sublayer的图层名称
+3. 不加载的图层不能在searchSelect中显示出来
+｝
+
+mapComponents{
+(地图展示相关组件)
+主要包括两个部分：
+1. webMapview
+2. searchControl
+}
+
+webMapview｛
+（Mapview组件来自Arcgis api）
+1. 用于承载webMap（父类是Map）
+* 监听Mapview的点击事件，每点击一次执行一次identyfyTask事件
+｝
+
+searchControl｛
+（搜索相关组件）
+主要包括三个部分：
+1. searchInput
+2. searchSelect
+3. searchReItem
+｝
+
+searchSelect｛
+（用于收集用户选择的图层）
+1.获取图层与相应字段的属性
+2.与图层显示隐藏联动（不被显示的不在选项中）
+｝
+
+searchInput｛
+（用户填写搜索条件，执行搜索）
+1. 输入查询条件
+2. 点击按钮执行搜索
+*监听Layer异步加载，加载好后传回sublayer的Collection，用于查询
+*监听searchSelect中图层、字段的选择事件，获取选择的图层与字段
+｝
+
+searchReItem｛
+（用于控制查询结果的展示）
+*监听searchInput的异步查询事件，完成后根据选择的图层传入需要加载的List类、查询结果, 选择的图层, 字段
+｝
