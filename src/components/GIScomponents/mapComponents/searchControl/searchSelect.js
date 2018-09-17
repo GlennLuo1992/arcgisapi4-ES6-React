@@ -2,6 +2,18 @@ import React from "react";
 import {Cascader} from 'antd';
 
 let initOptions = [];
+const promisetest = function (name) {
+    return new Promise((resolve, reject) => {
+        if (name === 'Y') {
+            let result = "yes";
+            resolve(result);
+        }
+        else {
+            let result = "no";
+            reject(result);
+        }
+    })
+};
 
 export class searchSelect extends React.Component {
     constructor(props) {
@@ -68,7 +80,7 @@ export class searchSelect extends React.Component {
     //选择好了需要查询的图层和字段
     onChange = (value) => {
         this.props.emitter.emit('GotSelectedProps', value[0], value[1]);
-
+        promisetest('Y').then(result => console.log(result));
     };
 
     render() {
