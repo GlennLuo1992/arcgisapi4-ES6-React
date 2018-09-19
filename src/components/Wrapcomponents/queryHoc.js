@@ -4,11 +4,17 @@ import ResultList from "../GIScomponents/mapComponents/searchControl/searchReIte
 import QueryTask from "esri/tasks/QueryTask";
 import Query from "esri/tasks/support/Query";
 
+/*query所需参数：
+*paras = ｛selectedLayer：需要被查询的图层id
+  selectedField：需要被查询的字段名称
+  LayersCol：sublayer的collection
+  emitter：全局emitter
+  value：查询关键字｝
+  */
 export function qDecorator(msg) {
     return (WrappedComponent) => {
         return class queryHoc extends React.Component {
             doQuery = (paras) => {
-
                 message.config({
                     top: 40
                 });
