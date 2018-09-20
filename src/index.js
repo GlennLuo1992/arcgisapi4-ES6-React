@@ -12,13 +12,13 @@ const {Header, Content, Sider} = Layout;
 
 import MapImageLayer from "esri/layers/MapImageLayer";
 import WebMap from "esri/WebMap";
+import config from "config.json"
 
 import TocControl from "./components/GIScomponents/tocControl";
 import MapComponents from "./components/GIScomponents/mapComponents/mapComponents"
 
 import "./css/main.scss";
 const emitter = new EventEmitter();
-const URL="https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer";
 // const URL="https://sampleserver6.arcgisonline.com/arcgis/rest/services/Hurricanes/MapServer";
 // const URL="https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer";
 const addDOMNode = () => {
@@ -29,7 +29,7 @@ const addDOMNode = () => {
 };
 
 const mapImageLayer = new MapImageLayer({
-    url: URL
+    url: config.url
 });
 
 const webmap = new WebMap({

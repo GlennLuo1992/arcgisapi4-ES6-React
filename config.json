@@ -1,0 +1,4 @@
+{
+  "url":"https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer",
+  "Layer1path":"src/components/GIScomponents/mapComponents/searchControl/searchReItem/resultList.js"
+}
