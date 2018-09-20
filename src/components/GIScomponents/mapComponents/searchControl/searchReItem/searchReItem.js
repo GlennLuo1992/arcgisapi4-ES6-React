@@ -24,11 +24,11 @@ class searchReItem extends React.Component {
             selectedField: selectedField
         });
         let Render = render;
-        ReactDOM.unmountComponentAtNode(document.getElementById('searchReItem'));
+        ReactDOM.unmountComponentAtNode(document.querySelector("#searchReItem"));
         ReactDOM.render(<Render data={this.state.data}
                                 selectedField={this.state.selectedField}/>
-            , document.getElementById("searchReItem"));
-        document.getElementById("searchReItem").style.visibility = "visible";
+            , document.querySelector("#searchReItem"));
+        document.querySelector("#searchReItem").style.visibility = "visible";
     };
 
     render() {
