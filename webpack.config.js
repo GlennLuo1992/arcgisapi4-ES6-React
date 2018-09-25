@@ -74,6 +74,12 @@ module.exports = {
                 test: /\.scss$/,
                 use: ["cache-loader", MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                include: path.resolve(__dirname, "src"),
+                loader: "eslint-loader",
+            }
         ]
     },
 

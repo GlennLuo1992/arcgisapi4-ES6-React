@@ -1,12 +1,9 @@
-import React from "react";
-import {WebMapView} from "./webMapview";
-import SearchControl from "./searchControl/searchControl";
+import React from 'react';
+import {WebMapView} from './webMapview';
+import SearchControl from './searchControl/searchControl';
 
 
 export class mapComponents extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
